@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <div style="display:flex; gap:20px;">
+    <div style="padding: 10px;">
+        <a href="/">Home</a>
+        
+    </div>
+    <div style="padding: 10px;">
+        <a href="/navigation/contact/">Contact</a>
+
+    </div>
+    <div style="padding: 10px;">
+        <a href="/navigation/details">Details</a>
+
+    </div>
+
+   </div>
+
+   <div><h1>This is Details</h1></div>
+
+   <p>authors name is {{authors}}</p>
+
+
+   <!-- Conditionsl part-->
+   {% if Age == 18%}
+        <p>He is a adult </p>
+    {% else%}
+        <p>He is tenager</p>
+    {%endif%}
+
+ <!--For loop-->
+
+
+ <h3>Some Special Course for you!</h3>
+
+ {% for course in courses%}
+   <p>Couse name : {{course.name}}  Price: {{course.price}}</p>
+ {%endfor%}
+
+</body>
+</html>
