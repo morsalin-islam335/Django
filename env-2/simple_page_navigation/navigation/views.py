@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
-
+import datetime
 
 def home(request):
     return HttpResponse("This is navigation app home page")
@@ -12,7 +12,7 @@ myDict = {"authors":"Morsalin Islam","Age":18,
               {'name':"C++", "price":4000},
               {"name":"Python", "price":4000},
               {"name":"Django", "price":8000}
-                    ]}
+                    ], "list":["python","is","fun"], "date": datetime.datetime.now(), "empty":""}
 def details(request):
     return render(request, "navigation/details.html",myDict)
 

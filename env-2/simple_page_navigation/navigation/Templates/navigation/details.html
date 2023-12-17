@@ -44,5 +44,14 @@
    <p>Couse name : {{course.name}}  Price: {{course.price}}</p>
  {%endfor%}
 
+
+ <!-- Template filtering -->
+
+  <h1> this is join template: {{ list | join:" - " }}</h1>
+  <h3>Today {{ date | date:"D d M Y" }} </h3>
+  <h3>Today {{ date|date:"SHORT_DATE_FORMAT" }} </h3>
+  {% comment %} <h4>empty {{ empty | default: "nothing here" }} </h4> {% endcomment %}
+  
+
 </body>
 </html>
