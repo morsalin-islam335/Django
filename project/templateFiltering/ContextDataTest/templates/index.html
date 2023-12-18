@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <title>Djanog Template</title>
+</head>
+<body>
+    <h1 style = "background: green; color: white; margin-left: 15%; margin-right: 15%;">Welcome to learn Django Template</h1>
+
+    <!-- Geeks for geeks website practice-->
+
+{% comment %} <!--    {{ value | filter_name}}--> <!-- it is syntax for filtering in django--> {% endcomment %}
+
+{% comment %} <h3> length:{{string | length }} </h3> {% endcomment %}
+<h3> length:{{ string|length }} </h3>
+
+
+<h3> add: {{ value | add:"2" }} </h3>
+{% comment %} <h3> add: {{ value | add: 2 }} </h3>  That is not correct exsmple   {% endcomment %}
+<h3> addslashes {{ quote | addslashes }} </h3>
+<h3> capfirst {{ string | capfirst }} </h3>
+<h3> center {{ string | center:"10" }} </h3>
+<h3> cuts {{ string | cut:" " }} </h3>
+<h3> date {{ date | date:"D d M Y" }} </h3>
+<h3> dictsort {{ dict | dictsort:"name" }}</h3>
+<h3> divisible by {{ value | divisibleby:"3" }} </h3>
+<h3> first {{ list | first }}</h3> <!-- just works with list-->
+{% comment %} <h3> join {{ ['p','r','o','g','r','a','m','m','e','r'] | join:" // " }} </h3> {% endcomment %}
+<h3> Join template  {{ string | join:" $ " }} </h3>
+<h3> return last item of list  {{ list | last }} </h3>
+<h3> add line number </h3>
+<h3> {{ multiline | linenumbers }}</h3>
+<h3> lowers {{ string | lower }}}</h3>
+<h3> random item: {{ list | random }}</h3>
+<h3> make list: {{ string | make_list }}</h3>
+<h3> slice:  {{ list | slice:":2" }}</h3>
+<h3> slugify {{ string | slugify }} </h3> <!-- that will be remove space or numeric char or etc and replace them with hyphen-->
+<h3> time {{ date | time:"H:i" }}</h3>
+<h3> timesince {{ postDate | timesince:date }} </h3>
+<h3> title {{ string | title }} </h3>
+<h3> unordered_list {{ nestedList | unordered_list }}</h3>
+<br>
+<h3> words count {{ string | wordcount }} </h3>
+ {% comment %} earthly.dev {% endcomment %}
+<h3> date {{ date|date:"SHORT_DATE_FORMAT" }}</h3>
+<h3> escape {{ quote | escape }} </h3>
+<h3> list {{ list | last }} </h3>
+<h3> truncatechars {{ string | truncatechars:6 }}. </h3>
+<h3> truncatewords {{ string | truncatewords:3 }} </h3>
+<h3> Pluralize filter:  You have {{ value }} message{{ value | pluralize }}</h3>
+<h3> </h3>
+<h3> </h3>
+<h3> </h3>
+<h3> </h3>
+<h3> </h3>
+<h3> </h3>
+<h3> </h3>
+<h3> </h3>
+<h3> </h3>
+<h3> </h3>
+<h3> </h3>
+<h3> </h3>
+<h3> </h3>
+<h3> </h3>
+<h3> </h3>
+<h3> </h3>
+<h3> </h3>
+<h3> </h3>
+<h3> </h3>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</html>
