@@ -36,8 +36,8 @@
                 <a class="nav-link active" aria-current="page" href="{% url "home" %}">Home</a>
               </li>
               <li class="nav-item">
-                {% comment %} <a class="nav-link" href="{% url "about" id=1 %}">About</a> {% endcomment %}
-               <a class="nav-link" href="{% url "about" %}">About</a>
+               {% comment %} <a class="nav-link" href="{% url "about" id=1 %}">About</a> {% endcomment %}
+                 <a class="nav-link" href="{% url "about" %}">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Pricing</a>
@@ -50,9 +50,6 @@
         </div>
       </nav>
 
-
-
-    <h1>This is home  page</h1>
    <div class="d-flex justify-content-center">
     <img src="static/flower2.jpeg" alt="this is a image" />
     <!-- way 1-->
@@ -60,25 +57,8 @@
     <!-- way-2-->
   </div>
 
-
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">Others</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for data in myDict %}
-        <tr>
-          <td>{{data.name}}</td>
-          <td>{{data.email}}</td>
-          <td>{{data.body}}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+  <h1>This is about page</h1>
+  <h3>Id : {{id}}</h3>
 
   </body>
   

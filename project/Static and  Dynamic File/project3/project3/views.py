@@ -42,3 +42,17 @@ data = [
 # myDict = {"data2": data}
 def home(request):
     return render(request, "index.html", {"myDict":data})
+    
+
+
+from django.http import HttpResponse
+
+def about(request):
+    print(request.GET)
+    return render(request, "about.html",{"id": id})
+    
+
+# def about(request):
+#     return render(request, "about.html",{"id": id})
+    
+
