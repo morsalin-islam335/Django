@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+ {% block content%} 
+    {% load crispy_forms_tags %}
+    <form  method="POST" style="width: 50%; height: 500px; margin-left: 28%;">
+        {% csrf_token %}
+        {{form |crispy}}  <!-- eta djanog crispy forms er jono-->
+    {% comment %} {{form.as_p}} <!-- eta table format er jonn--> {% endcomment %}
+    <button type="submit" class="btn btn-primary ms-5 mt-3">Submit</button>
+    
+    </form>
+{% endblock %}

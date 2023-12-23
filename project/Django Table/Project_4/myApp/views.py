@@ -23,3 +23,13 @@ def form(request):
     # print(request.POST)
    return render(request, "form.html")
 
+
+from . forms import Contact
+
+
+def DjangoForm(request):
+    form = Contact(request.POST)
+    if form.is_valid():
+        print(form.cleaned_data) 
+    return render(request, "django_form.html", {"form": form})
+
