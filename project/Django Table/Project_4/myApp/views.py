@@ -25,6 +25,7 @@ def form(request):
 
 
 from . forms import Contact
+from . forms import StudentData
 
 
 
@@ -47,4 +48,15 @@ def DjangoForm(request):
     else:
         form = Contact()
     
+    return render(request, "django_form.html", {"form": form})
+
+
+
+def  StudentFormData(request):
+    if request.method == "POST":
+        form = StudentData(request.POST, request.FILES)
+        if form.is_valid():
+            print(form.cleaned_data)
+    else:
+        form = StudentData()
     return render(request, "django_form.html", {"form": form})
