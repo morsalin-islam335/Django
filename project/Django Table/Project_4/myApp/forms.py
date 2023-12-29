@@ -71,7 +71,7 @@ class StudentData(forms.Form):
     comment = forms.CharField(label="Comment", validators= [commentValidator])
 
     numeric_field = forms.IntegerField(
-        widget=forms.NumberInput(attrs={'placeholder': 'Enter a number'})
+        widget=forms.NumberInput(attrs={'placeholder': 'Enter a number'}))
 
     
 

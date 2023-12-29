@@ -59,4 +59,4 @@ def  StudentFormData(request):
             print(form.cleaned_data)
     else:
         form = StudentData()
-    return render(request, "django_form.html", {"form": form})
+    return render(request, "django_form.html", {"form": form}) 
