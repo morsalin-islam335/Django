@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<a class = 'btn btn-warning' href="{% url 'changePasswordWithOldPassword'%}">Change Password With Old Password</a>
+<a class = 'btn btn-info' href="{% url 'changePasswordWithOutOldPassword'%}">Change Password Without Old Password</a>
+<br>
+<br>
+<h1>Wellcome to your profile</h1>
+<h1>Hello {{user}}</h1>
+
+
+<br><br><br>
+
+<a class = 'btn btn-danger' href="{% url 'editProfile'%}">Edit Profile</a>
+<a class = 'btn btn-success' href="{% url 'showProfile'%}">show Profile</a>
+
+{% endblock content %}

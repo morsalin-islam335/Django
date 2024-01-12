@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+   
+{% comment %} <h1>{{user.username}}</h1> {% endcomment %}
+
+
+<style>
+    .vertical-border th,
+    .vertical-border td {
+      border-right: 1px solid;
+    }
+  </style>
+  
+
+<h3 class = 'text-center text-alert'>Profile Information</h3>
+
+<table class="vertical-border mt-3 table table-sm table-borderd table-info text-white m-auto" style = "width: 50%;">
+    <tbody>
+      <tr>
+        <th>Username</th>
+        <td>{{user.username}}</td>
+      </tr>
+      <tr>
+        <th>First Name</th>
+        <td>{{user.first_name}}</td>
+      </tr>
+      <tr>
+        <th>last name</th>
+        <td>{{user.last_name}}</td>
+      </tr>
+      <tr>
+        <th>Email address</th>
+        <td>{{user.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+{% endblock content %}

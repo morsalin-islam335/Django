@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}
+<title>Add post Page</title>
+{% endblock title %}
+
+{% block content %}
+    <form method = "POST">
+        {% csrf_token %}
+        {% load crispy_forms_tags %}
+        {{form | crispy}}
+        <input  class = 'btn btn-success' type="submit" value="submit data">
+    </form>
+{% endblock  %}
+

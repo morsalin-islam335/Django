@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+    .message{
+      color: green;
+      background-color: cyan;
+    }
+  }
+</style>
+
+
+{% if messages %}
+{% for message  in messages %}
+{% comment %} <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="..." class="rounded me-2" alt="...">
+      <strong class="me-auto">Bootstrap</strong>
+      <small class = 'text-success'>Welcome</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      {{message}}
+    </div>
+  </div>
+ {% endcomment %}
+
+  <small class = "message">{{message}}</small>
+{% endfor %}
+{% endif %}
+
+<h1 class = 'text-center text-success bg-warning '>Sign-Up Form</h1>
+{% load crispy_forms_tags %}
+<form method = "POST" style = 'width: 50%; margin: auto;'>
+
+{% csrf_token %}
+
+{% comment %} {{form | crispy}} {% endcomment %}
+
+{% for field in form  %}<br> {{field.label_tag}} {{field}} {{field.errors | striptags}}
+<br>  {% endfor %}
+
+<br>
+
+
+<button type="submit" class="btn btn-primary">Submit Data</button>
+
+</form>
+
+
+
+{% endblock content %}
+
+
+    
