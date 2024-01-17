@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+<h2 class = 'bg-success text-info'>Add Category Page</h2>
+{% block content %}
+
+<h3 class = 'text-info bg-success text-center p-2'>Add Category Page</h3>
+    <form  method = "POST" class = 'm-auto w-50'>
+        {% load crispy_forms_tags %}
+        {% csrf_token %}
+
+        {{form | crispy}}
+
+        <button type="submit" class = 'btn btn-success'>submit</button>
+
+    </form>
+{% endblock content %}
+

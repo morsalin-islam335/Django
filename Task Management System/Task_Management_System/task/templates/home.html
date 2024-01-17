@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}HomePage{% endblock title %}HomePage
+
+{% block content %}
+    <h4 class = 'bg-info text success text-center'>This is homepage</h4>
+
+    <div class = 'd-flex flex-wrap justify-content-center' style = 'gap:20px;'>
+
+        {% for task in tasks %}
+        <div class="card" style="width: 25rem;">
+            <div class="card-header">
+             <b class = 'm-auto'> Task id: {{task.id}}</b>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Task Assign Date : <b>{{task.TaskAssignDate}}</b> </li>
+              <li class="list-group-item">Task Description :{{task.taskDescription}}</li>
+              <li class="list-group-item"><h4>Task Category: </h4>
+                {% for category in task.category.all %}
+                    <button class = 'btn btn-info disabled text-light m-2'>{{category.category_name}}</button>
+                {% endfor %}
+              </li>
+              {% if task.is_completed %}
+              <button class = 'btn btn-success  text-white p-2 disabled'>Completed</button>
+              {% else %}
+              <li class="list-group-item "><a class = 'p-3 text-light btn btn-warning mx-2' href="{% url 'editTask' task.id %}">Edit</a> <a class = 'btn btn-danger p-3 mx-2' href="{% url 'deleteTask' task.id %}">Delete</a></li>
+
+              {% endif %}
+            </ul>
+          </div>
+         
+        {% endfor %}
+    </div>
+{% endblock content %}
